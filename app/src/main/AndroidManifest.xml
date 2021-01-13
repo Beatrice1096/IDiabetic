@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.idiabetic" >
+    package="com.example.idiabetic">
 
     <application
         android:allowBackup="true"
@@ -8,12 +8,16 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.IDiabetic" >
+        android:theme="@style/Theme.IDiabetic">
+        <activity android:name=".logBook.LogBookActivity"></activity>
+        <activity
+            android:name=".logEntry.LogEntryActivity"
+            android:label="@string/title_activity_log_entry"
+            android:theme="@style/Theme.IDiabetic.NoActionBar" />
         <activity
             android:name=".TestActivity"
             android:label="@string/title_activity_test"
-            android:theme="@style/Theme.IDiabetic.NoActionBar" >
-        </activity>
+            android:theme="@style/Theme.IDiabetic.NoActionBar" />
         <activity
             android:name=".main.MainActivity"
             android:label="@string/title_activity_main"
@@ -25,7 +29,7 @@
         <activity
             android:name=".login.LoginActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

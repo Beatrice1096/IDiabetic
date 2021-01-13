@@ -35,7 +35,6 @@ class LoginActivity : AppCompatActivity(), LoginView {
     override fun onStop() {
         super.onStop()
         presenter.unbind()
-
     }
 
     override fun showMessage(text: String) {
