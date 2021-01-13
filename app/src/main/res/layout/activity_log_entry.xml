@@ -6,12 +6,53 @@
     android:layout_height="match_parent"
     tools:context=".logEntry.LogEntryActivity">
 
-    <EditText
-        android:id="@+id/glucose"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/text_read"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/glucose_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="gluco"
+            android:inputType="number" />
+        <EditText
+            android:id="@+id/carbo_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="carbo"
+            android:inputType="number" />
+        <EditText
+            android:id="@+id/insulin_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="insulin"
+            android:inputType="number" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/add_glucose"
+        android:text="add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
