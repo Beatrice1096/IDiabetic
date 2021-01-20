@@ -2,6 +2,7 @@ package com.example.idiabetic.login
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.idiabetic.R
@@ -16,11 +17,12 @@ class LoginActivity : AppCompatActivity(), LoginView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+        actionBar?.hide()
         login_bnt.setOnClickListener {
             // the method which should be called when login is pressed
             presenter.login(
-                    login_username.text.toString(),
+                    login_email.text.toString(),
                     login_password.text.toString()
             )
         }
